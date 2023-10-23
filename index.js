@@ -1,13 +1,35 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const seen = {};
+  for (let i = 0; i < array.length; i++) {
+    const num = array[i];
+    const diff = target - num;
+    console.log(diff, target, num, seen)
+    if (seen[diff]) {
+      
+      return true;
+    }
+    seen[num] = true;
+  }
+  return false;
 }
-
+// write a function x that takes an array of intergers and a target interger as arguments
+// if two intergers in the array add up to equal the target integer the function should return true
+// if not it should return false
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+
+  define function
+  iterate through the array
+  sum = array[0]+ 
+  if( sum = target){
+    return true}else{
+      return false
+    }
+  }
 */
 
 /*
